@@ -35,7 +35,7 @@ const Auth = () => {
         e.preventDefault();
         const { username, password, phoneNumber, avatarURL } = form;
 
-        const URL = 'https://chat-app-server-rose.vercel.app/';
+        const URL = 'https://frosty-sun-1139.fly.dev/auth';
 
         //axios create the comunication between the front and the back end, it sends the request to the back end.
         const { data: {token, userId, hashedPassword, fullName} } = await axios.post(`${URL}${isSignUp ? '/signup' : '/login'}`, { //we are sending a post request to the server. indicating as first parameter the URL and if it is singin or singup.
